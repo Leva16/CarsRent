@@ -1,6 +1,8 @@
 package rent;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
@@ -75,6 +77,9 @@ public class RentProcess {
 
             askManagerForCar(client, manager);
 
+        } else {
+            
+            printWithTime("Client %s needs 10 sec to ride the car %s.", client.getName(), car.getName());
         } else {
 
             printWithTime("Client %s needs %dms to ride the car %s.", client.getName(), RENT_TIME, car.getName());
