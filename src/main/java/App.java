@@ -25,6 +25,7 @@ public class App {
         Client c8 = new Client("Tom");
         Client c9 = new Client("Vikusya");
         Client c10 = new Client("John");
+        Client c11 = new Client("Ted");
 
         List<Client> clientList = Arrays.asList(c1, c2, c3, c4, c5, c6, c7, c8, c9, c10);
 
