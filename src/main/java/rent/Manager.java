@@ -11,7 +11,7 @@ public class Manager {
 
         private Map<String, Car> availableCars = new HashMap<>();
 
-        private final Object coffe = new Object();
+        private final Object coffee = new Object();
 
         public Manager(final List<Car> carList) {
             for (Car car: carList) {
@@ -21,7 +21,7 @@ public class Manager {
             totalCarNames = getCarNames(carList);
         }
 
-        public Object getCoffe() { return coffe; }
+        public Object getCoffee() { return coffee; }
 
         private List<String> getCarNames(final List<Car> carList) {
             return carList.stream()
@@ -31,7 +31,7 @@ public class Manager {
 
         public List<String> getTotalCarNames() { return totalCarNames; }
 
-        public boolean isCarAvailable() { return availableCars.size() != 0; }
+        public boolean isCarAvailable(final String name) { return availableCars.containsKey(name); }
 
         public Car giveCarToClient(final String carName) {
 
