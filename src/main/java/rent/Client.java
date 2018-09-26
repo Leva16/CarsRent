@@ -5,9 +5,6 @@ public class Client {
     private String name;
     private Car car;
 
-    private boolean isDrive = false;
-
-
     public Client(final String name) {
         this.name = name;
     }
@@ -28,11 +25,4 @@ public class Client {
         this.car = car;
     }
 
-    public boolean isDrive() {
-        return isDrive;
-    }
-
-    public void setDrive(boolean drive) {
-        isDrive = drive;
-    }
 }
