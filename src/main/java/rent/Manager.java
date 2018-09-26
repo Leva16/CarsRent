@@ -1,13 +1,12 @@
 package rent;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Manager {
-
-        private List<String> totalCarNames;
 
         private Map<String, Car> availableCars = new HashMap<>();
 
@@ -17,21 +16,14 @@ public class Manager {
             for (Car car: carList) {
                 availableCars.put(car.getName(), car);
             }
+        }
 
-            totalCarNames = getCarNames(carList);
+        public List<Car> getAvailableCars() {
+
+            return new ArrayList<>(availableCars.values());
         }
 
         public Object getCoffee() { return coffee; }
-
-        private List<String> getCarNames(final List<Car> carList) {
-            return carList.stream()
-                    .map(Car::getName)
-                    .collect(Collectors.toList());
-        }
-
-        public List<String> getTotalCarNames() { return totalCarNames; }
-
-        public boolean isCarAvailable(final String name) { return availableCars.containsKey(name); }
 
         public Car giveCarToClient(final String carName) {
 
