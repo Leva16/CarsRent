@@ -24,5 +24,4 @@ public class Client {
     public void setCar(Car car) {
         this.car = car;
     }
-
 }

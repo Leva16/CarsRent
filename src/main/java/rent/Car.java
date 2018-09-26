@@ -24,8 +24,7 @@ public class Car {
     public void setCarAvailable(boolean carAvailable) {
         isCarAvailable = carAvailable;
     }
-
-
+  
     @Override
     public String toString() {
         return modelName;

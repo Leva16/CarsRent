@@ -27,7 +27,7 @@ public class RentProcess {
 
     public void startRent() {
 
-        for (Client client: clientList) {
+        for (Client client : clientList) {
             Thread thread = new Thread(() -> rentCarToClient(client));
             thread.start();
         }
@@ -42,7 +42,6 @@ public class RentProcess {
     private void rentCarToClient(final Client client) {
 
         askManagerForCar(client, manager);
-
     }
 
     private void askManagerForCar(final Client client, final Manager manager) {
@@ -61,7 +60,6 @@ public class RentProcess {
 
                 printWithTime("Give the car \"%s\" to \"%s\".",
                         car.getName(), client.getName());
-
             }
         }
 
@@ -80,7 +78,11 @@ public class RentProcess {
             askManagerForCar(client, manager);
 
         } else {
+            
             printWithTime("Client %s needs 10 sec to ride the car %s.", client.getName(), car.getName());
+        } else {
+
+            printWithTime("Client %s needs %dms to ride the car %s.", client.getName(), RENT_TIME, car.getName());
 
             try {
                 Thread.sleep(RENT_TIME);

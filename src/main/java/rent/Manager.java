@@ -1,6 +1,11 @@
 package rent;
 
 import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import java.util.stream.Collectors;
 
 public class Manager {
@@ -16,6 +21,7 @@ public class Manager {
         }
 
         public List<Car> getAvailableCars() {
+
             return new ArrayList<>(availableCars.values());
         }
 
